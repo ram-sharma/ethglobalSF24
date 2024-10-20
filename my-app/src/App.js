@@ -67,6 +67,7 @@ const bookAppointment = async (startTime) => {
     }
 
     const signer = provider.getSigner();
+    const startTimeInt = Math.floor(startTime); // Ensure it's a whole number
     const depositAmount = ethers.utils.parseEther('0.1');
     const contractAddress = '0xafd6F378455cb58dC99485E4c18CB7C1321A7127'; // Replace with your deployed contract address
     const contractABI = [
@@ -270,7 +271,7 @@ const bookAppointment = async (startTime) => {
       }
     ];
     const contract = new ethers.Contract(contractAddress, contractABI, signer);
-    const tx = await contract.bookAppointment(startTime, { value: depositAmount });
+    const tx = await contract.bookAppointment(startTimeInt, { value: depositAmount });
     await tx.wait();
 
     alert("Appointment booked successfully!");
