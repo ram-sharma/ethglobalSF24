@@ -68,7 +68,7 @@ const bookAppointment = async (startTime) => {
 
     const signer = provider.getSigner();
     const startTimeInt = Math.floor(startTime); // Ensure it's a whole number
-    const depositAmount = ethers.utils.parseEther('0.1');
+    const depositAmount = ethers.utils.parseEther('0.0001');
     const balance = await provider.getBalance(account);
     if (balance.lt(depositAmount)) {
       alert('Insufficient funds to cover the deposit and gas fees.');
@@ -277,7 +277,7 @@ const bookAppointment = async (startTime) => {
       }
     ];
     const contract = new ethers.Contract(contractAddress, contractABI, signer);
-    const tx = await contract.bookAppointment(startTimeInt, { value: depositAmount, gasLimit: ethers.BigNumber.from('100000') });
+    const tx = await contract.bookAppointment(startTimeInt, { value: depositAmount, gasLimit: ethers.BigNumber.from('1') });
     await tx.wait();
 
     alert("Appointment booked successfully!");
