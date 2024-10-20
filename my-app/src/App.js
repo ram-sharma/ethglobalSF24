@@ -107,7 +107,7 @@ function App() {
 
       const signer = provider.getSigner();
       const startTimeInt = Math.floor(startTime); // Ensure it's a whole number
-      const depositAmount = ethers.utils.parseEther('0.0001');
+      const depositAmount = ethers.utils.parseEther('0.01');
       const balance = await provider.getBalance(account);
       if (balance.lt(depositAmount)) {
         alert('Insufficient funds to cover the deposit and gas fees.');
