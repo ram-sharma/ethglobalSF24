@@ -282,6 +282,7 @@ const bookAppointment = async (startTime) => {
 
     alert("Appointment booked successfully!");
   } catch (error) {
+    console.log(error);
     if (error.code === 'ACTION_REJECTED') {
       alert('Transaction rejected by the user.');
     } else {
