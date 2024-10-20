@@ -335,7 +335,7 @@ function App() {
   }, []);
 
   const nounImageUrl = 'https://noun-api.com/beta/pfp?head=169&glasses=11'; // Noun image URL
-  
+
   return (
     <div>
       <h1>Calendly DApp with Coinbase Wallet and Polygon</h1>
@@ -352,8 +352,8 @@ function App() {
       <button onClick={() => bookAppointment(Date.now() / 1000 + 3600)}>
         Book Appointment for Next Hour
       </button>
-      🎉 Appointment Booked Success!  
-      {/* WARNING: FAKE SUCCESS MSG: This is a placeholder while I debug */}
+      {/* <p>🎉 Appointment Booked Success!</p>
+      WARNING: FAKE SUCCESS MSG: This is a placeholder while I debug */}
     </div>
   );
 }
