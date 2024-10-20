@@ -347,7 +347,7 @@ function App() {
       <button onClick={connectWallet}>
         {account ? `Connected: ${account}` : 'Connect Coinbase Wallet'}
       </button>
-
+      <h2>Next Available Appointment:</h2>
       <button onClick={() => bookAppointment(Date.now() / 1000 + 3600)}>
         Book Appointment for Next Hour
       </button>
