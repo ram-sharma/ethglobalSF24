@@ -317,6 +317,8 @@ function App() {
       ];
       const contract = new ethers.Contract(contractAddress, contractABI, signer);
       const tx = await contract.bookAppointment(startTimeInt, { value: depositAmount, gasLimit: ethers.BigNumber.from('500000') });
+      setSuccessMessage('🎉 Appointment Booked Success!'); // WARNING: FAKE SUCCESS MSG: This is a placeholder while I debug
+
       await tx.wait();
 
       alert("Appointment booked successfully!");
@@ -351,6 +353,8 @@ function App() {
       <button onClick={() => bookAppointment(Date.now() / 1000 + 3600)}>
         Book Appointment for Next Hour
       </button>
+
+      {successMessage && <p>{successMessage}</p>}
     </div>
   );
 }
