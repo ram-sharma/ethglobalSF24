@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react'; // Import React hooks
+import { ethers } from 'ethers'; // Import ethers.js
 import CoinbaseWalletSDK from '@coinbase/wallet-sdk';
 
 function App() {
