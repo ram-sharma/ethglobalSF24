@@ -5,7 +5,7 @@ import CoinbaseWalletSDK from '@coinbase/wallet-sdk';
 function App() {
   const [account, setAccount] = useState(null);
   const [provider, setProvider] = useState(null); // State to store the ethers provider
-  
+
   const APP_NAME = 'dAppointments with Polygon';
   const APP_LOGO_URL = 'https://cryptologos.cc/logos/polygon-matic-logo.png?v=035';  // Replace with your logo
   const DEFAULT_CHAIN_ID = 80002;  // Polygon Mumbai Testnet
@@ -77,8 +77,8 @@ const bookAppointment = async (startTime) => {
 
     alert("Appointment booked successfully!");
   } catch (error) {
+    alert(error);
     console.error("Error booking appointment:", error);
-    alert("Failed to book appointment.");
   }
 };
 
