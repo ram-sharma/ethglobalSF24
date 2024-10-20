@@ -88,7 +88,7 @@ useEffect(() => {
 
 return (
   <div>
-    <h1>Calendly DApp with Coinbase Wallet</h1>
+    <h1>Calendly DApp with Coinbase Wallet and Polygon</h1>
     <button onClick={connectWallet}>
       {account ? `Connected: ${account}` : 'Connect Coinbase Wallet'}
     </button>
