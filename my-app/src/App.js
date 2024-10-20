@@ -334,9 +334,12 @@ function App() {
     checkIfWalletConnected();
   }, []);
 
+  const nounImageUrl = 'https://noun-api.com/beta/pfp?head=169&glasses=11'; // Noun image URL
+  
   return (
     <div>
       <h1>Calendly DApp with Coinbase Wallet and Polygon</h1>
+      <img src={nounImageUrl} alt="Noun Avatar" style={{ width: '200px', height: '200px' }} />
       <h2>MetaMask Wallet: </h2>
       <button onClick={connectMetaMask}>
         {account ? `Connected: ${account}` : 'Connect MetaMask'}
