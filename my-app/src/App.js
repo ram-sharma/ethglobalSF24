@@ -352,8 +352,6 @@ function App() {
       <button onClick={() => bookAppointment(Date.now() / 1000 + 3600)}>
         Book Appointment for Next Hour
       </button>
-
-      {successMessage && <p>{successMessage}</p>}
     </div>
   );
 }
