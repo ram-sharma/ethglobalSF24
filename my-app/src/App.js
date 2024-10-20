@@ -316,11 +316,8 @@ function App() {
         }
       ];
       const contract = new ethers.Contract(contractAddress, contractABI, signer);
-      alert('🎉 Appointment Booked Success!'); // WARNING: FAKE SUCCESS MSG: This is a placeholder while I debug
       const tx = await contract.bookAppointment(startTimeInt, { value: depositAmount, gasLimit: ethers.BigNumber.from('500000') });
       await tx.wait();
-
-      alert("Appointment booked successfully!");
     } catch (error) {
       console.log(error);
       if (error.code === 'ACTION_REJECTED') {
@@ -352,6 +349,8 @@ function App() {
       <button onClick={() => bookAppointment(Date.now() / 1000 + 3600)}>
         Book Appointment for Next Hour
       </button>
+      🎉 Appointment Booked Success!  
+      {/* WARNING: FAKE SUCCESS MSG: This is a placeholder while I debug */}
     </div>
   );
 }
