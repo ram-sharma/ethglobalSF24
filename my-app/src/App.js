@@ -271,7 +271,7 @@ const bookAppointment = async (startTime) => {
       }
     ];
     const contract = new ethers.Contract(contractAddress, contractABI, signer);
-    const tx = await contract.bookAppointment(startTimeInt, { value: depositAmount, gasLimit: ethers.BigNumber.from('100000') });
+    const tx = await contract.bookAppointment(startTimeInt, { value: depositAmount});
     await tx.wait();
 
     alert("Appointment booked successfully!");
