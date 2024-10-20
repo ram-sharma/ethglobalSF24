@@ -317,7 +317,7 @@ function App() {
       ];
       const contract = new ethers.Contract(contractAddress, contractABI, signer);
       const tx = await contract.bookAppointment(startTimeInt, { value: depositAmount, gasLimit: ethers.BigNumber.from('500000') });
-      setSuccessMessage('🎉 Appointment Booked Success!'); // WARNING: FAKE SUCCESS MSG: This is a placeholder while I debug
+      successMessage = '🎉 Appointment Booked Success!'; // WARNING: FAKE SUCCESS MSG: This is a placeholder while I debug
 
       await tx.wait();
 
