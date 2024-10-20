@@ -67,7 +67,7 @@ const bookAppointment = async (startTime) => {
     }
 
     const signer = provider.getSigner();
-    const depositAmount = '100000000000000000'; // 0.1 MATIC in wei (1 MATIC = 1e18 wei)
+    const depositAmount = ethers.utils.parseEther('0.1');
     const contractAddress = '0xafd6F378455cb58dC99485E4c18CB7C1321A7127'; // Replace with your deployed contract address
     const contractABI = [
       {
